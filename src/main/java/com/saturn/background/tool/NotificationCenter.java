@@ -1,4 +1,4 @@
-package com.saturn.background;
+package com.saturn.background.tool;
 
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationType;

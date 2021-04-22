@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.intellij' version '0.7.2'
 }
 
-group 'com.saturn'
+group 'com.saturn.intellijPlugin.backgroundImageFromBing'
 version '2.0'
 
 repositories {
@@ -20,9 +20,7 @@ intellij {
     version '2020.3.3'
 }
 patchPluginXml {
-    changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+
 }
 test {
     useJUnitPlatform()
