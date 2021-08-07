@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.saturn.intellijPlugin.backgroundImageFromBing'
-version '2.0'
+version '2.2'
 
 repositories {
     mavenCentral()
@@ -15,12 +15,17 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
+publishPlugin {
+    token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
+}
+
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version '2020.3.3'
 }
 patchPluginXml {
-
+    changeNotes """
+      Add opacity setting"""
 }
 test {
     useJUnitPlatform()

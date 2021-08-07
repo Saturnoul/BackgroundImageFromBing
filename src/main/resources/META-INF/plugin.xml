@@ -1,11 +1,13 @@
 <idea-plugin>
+    <idea-version since-build="162"/>
     <id>com.saturn.intellijPlugin.backgroundImageFromBing</id>
     <name>Background Image From Bing</name>
     <vendor email="3099916791@qq.com" url="https://github.com/Saturnluohao/BackgroundImageFromBing">Saturn</vendor>
 
     <description><![CDATA[
     Replace your ide background with everyday image from Bing at startup.<br>
-    You can set or clear background image from <b>View | BackgroundImageFromBing</b>
+    You can set or clear background image from <b>View | BackgroundImageFromBing</b><br>
+    Opacity can be set from <b>File | Settings | Appearance & Behavior | Background Opacity</b>
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -16,6 +18,8 @@
     <extensions defaultExtensionNs="com.intellij">
         <notificationGroup id="Background Image" displayType="BALLOON"/>
         <postStartupActivity implementation="com.saturn.background.MyStartupActivity"/>
+        <applicationConfigurable parentId="appearance" instance="com.saturn.background.setting.OpacitySetting"
+                                 id="com.saturn.background.setting.OpacitySetting" displayName="Background Opacity"/>
     </extensions>
 
     <actions>
